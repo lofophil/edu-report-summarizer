@@ -15,6 +15,21 @@ The pipeline consists of five stages. First, source documents are batch-converte
 
 The model strictly forbids English text, Arabic numerals, direct quotation from the source, and fabrication of information not present in the original document, making it suitable for formal educational research evaluation contexts.
 
+---
+
+## Overview
+
+Given a research report (`.docx`), the model outputs a structured abstract with five sections:
+
+| Section | Description |
+|---|---|
+| 研究问题 | Research Question |
+| 核心概念 | Core Concepts |
+| 研究目标和内容 | Research Objectives and Content |
+| 研究成果 | Research Outcomes |
+| 研究效果 | Research Impact |
+
+Each section: max **300 Chinese characters**. Total: max **1,500 characters**.
 
 ---
 
@@ -57,7 +72,7 @@ PythonProject/
 ├── example/                     ← anonymised sample outputs
 ├── data/                        ← converted .docx + JSONL (not uploaded)
 ├── seed/                        ← human-written seeds (not uploaded)
-└── checkpoints/                 ← LoRA weights (host on HuggingFace)
+└── checkpoints/                 ← LoRA weights (HuggingFace)
 ```
 
 ---
@@ -75,7 +90,7 @@ Download the base model:
 huggingface-cli download Qwen/Qwen2.5-7B-Instruct --local-dir ./checkpoints/base
 ```
 
-Download the LoRA weights from HuggingFace:
+Download the LoRA weights:
 ```bash
 hf download lofo361/edu-report-summarizer-lora --local-dir ./checkpoints/final_best
 ```
@@ -189,3 +204,4 @@ MIT License
 - [Qwen2.5](https://github.com/QwenLM/Qwen2.5) by Alibaba Cloud
 - [BGE](https://github.com/FlagAI-Open/FlagEmbedding) by BAAI
 - [PEFT](https://github.com/huggingface/peft) by Hugging Face
+- LoRA weights: [lofo361/edu-report-summarizer-lora](https://huggingface.co/lofo361/edu-report-summarizer-lora)
