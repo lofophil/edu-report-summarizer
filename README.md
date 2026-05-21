@@ -75,7 +75,10 @@ Download the base model:
 huggingface-cli download Qwen/Qwen2.5-7B-Instruct --local-dir ./checkpoints/base
 ```
 
-Place your LoRA weights at `checkpoints/qwen2.5-mainidea-final-stable-fast-infer5-seedguide/final_best/`
+Download the LoRA weights from HuggingFace:
+```bash
+hf download lofo361/edu-report-summarizer-lora --local-dir ./checkpoints/final_best
+```
 
 Run inference:
 ```bash
