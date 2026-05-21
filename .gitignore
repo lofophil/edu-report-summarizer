@@ -1,0 +1,45 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model checkpoints
+checkpoints/
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+
+# Embedding caches
+**/cache_embeddings/
+*.npz
+
+# Data folder (source docs, jsonl — do not upload)
+data/
+
+# Seeds (human annotations)
+seed/
+
+# Research reports (source documents)
+研究报告/
+
+# Results
+result/
+
+# Logs
+*.csv
+
+# IDE
+.idea/
+.vs/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
